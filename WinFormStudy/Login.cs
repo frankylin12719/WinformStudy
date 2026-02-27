@@ -19,7 +19,30 @@ namespace WinFormStudy
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("点！！！");
+            //MessageBox.Show("点！！！");
+            string account = textBox1.Text;
+            string password = textBox2.Text;
+
+            //MessageBox.Show(account + password);
+            if (account != "1111")
+            {
+                MessageBox.Show("账号有误");
+                textBox1.Text = "";
+                textBox2.Text = "";
+                return;
+            }
+
+            if (password != "2222")
+            {
+                MessageBox.Show("密码有误");
+                textBox1.Text = "";
+                textBox2.Text = "";
+                return;
+            }
+
+            MessageBox.Show("验证通过，跳转中...");
+
+
         }
     }
 }
