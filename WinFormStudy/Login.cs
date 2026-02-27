@@ -40,7 +40,11 @@ namespace WinFormStudy
                 return;
             }
 
-            MessageBox.Show("验证通过，跳转中...");
+            //MessageBox.Show("验证通过，跳转中...");
+            Home home = new(account);
+            home.Show();
+
+            this.Hide(); //单例模式 this 指的是 login
 
 
         }
