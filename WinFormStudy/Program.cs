@@ -14,6 +14,7 @@ namespace WinFormStudy
             //Form1 form1 = new();
             //Application.Run(form1);
             Login login = new();
+            GlobalFunc.Instance.LoginPage = login;
             Application.Run(login);
         }
     }

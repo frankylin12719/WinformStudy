@@ -15,6 +15,11 @@ namespace WinFormStudy
         public Login()
         {
             InitializeComponent();
+            label1.Text = GlobalFunc.Instance.Name;
+            GlobalFunc.Instance.Name = "it changed";
+            //GlobalFunc instance = new();
+            //label1.Text = instance.Name;
+            //instance.Name = "it changed";  // 下行并没有改变
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,10 +46,12 @@ namespace WinFormStudy
             }
 
             //MessageBox.Show("验证通过，跳转中...");
+            GlobalFunc.Instance.PasswordG = password;
             Home home = new(account);
             home.Show();
 
-            this.Hide(); //单例模式 this 指的是 login
+            //this.Hide(); //this 指的是 login
+            GlobalFunc.Instance.LoginPage.Hide();
 
 
         }

@@ -15,7 +15,7 @@ namespace WinFormStudy
         public Home(String account)
         {
             InitializeComponent();
-            label2.Text = "Hi," + account;
+            label2.Text = "Hi，" + account + "- " + GlobalFunc.Instance.Name +"- PASSWORD:"+GlobalFunc.Instance.PasswordG;
         }
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
